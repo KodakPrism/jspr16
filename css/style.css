@@ -1,0 +1,576 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.7s;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', 'Sans-serif';
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@font-face{
+    font-family: "SrbijaSans";
+    src: url(../font/SrbijaSans.otf);
+}
+
+h1 h2 h3{
+    font-family: "SrbijaSans";
+}
+
+.modalNumber {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    font-size: 18px;
+    padding: 20px;
+    background-color: #32444e;
+    color: #ddd;
+    border-radius: 10px;
+    z-index: 1000000000;
+    display: none;
+}
+
+.modalNumber a{
+    color: #ddd;
+}
+
+.modalNumber.show {
+    display: flex;
+}
+
+/* Header */
+
+a{
+    color: black;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px #b9c5d5;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.logo{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+}
+
+.logo:hover{
+    transition: .6s; 
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+
+.logo {
+    width: fit-content;
+}
+
+.header__nav-list {
+    
+    display: flex;
+    gap: 40px;
+}
+
+.header__nav-item{
+    font-family: "SrbijaSans";
+}
+
+.header__nav-item:hover{
+  transition: .6s; 
+  transform: scale(1.1); 
+  cursor: pointer;
+  color: #46653c;
+}
+
+.header__nav-link{
+    font-family: "SrbijaSans";
+}
+
+.header__nav-link:hover{
+    color: #46653c;
+}
+
+.header__right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.button__header{
+    color: #db9d00c5;
+    background-color: #ffffff;
+    border: 3px solid #32444e;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.button__header:hover{
+    transition: .6s; 
+    transform: scale(1.1); 
+    cursor: pointer;
+    color: #e2e5ec;
+    background-color: #46653c;
+    border: 3px solid #46653c;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/* Header exit */
+
+/* Banner */
+
+.banner__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.img__banner{
+    display: flex;
+    margin-top: 100px;
+    width: 600px;
+    height: 600px;
+}
+
+.banner__title{
+    margin-top: 300px;
+    color: black;
+}
+
+h1{
+    font-family: "SrbijaSans";
+    font-weight: 900;
+    font-size: 60px;
+    color: #32444e;
+    margin-bottom: 20px;
+}
+
+p{
+    font-family: "SrbijaSans";
+    font-size: 32px;
+    color: #587175;
+    margin-bottom: 10px;
+}
+
+.btn__banner{
+    font-family: "SrbijaSans";
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #e2e5ec;
+    border: 5px solid #DB9E00;
+    color: #DB9E00;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.btn__banner:hover{
+    border: 5px solid #DB9E00;
+    background-color: #DB9E00;
+    color: #e2e5ec;
+    border-radius: 50px;
+    transition: .6s; 
+    transform: scale(1.1);
+}
+
+/* Banner exit */
+
+/* Katalog */
+
+.section-catalog{
+
+    display: flex;
+    flex-direction: row;
+    background-color: #e2e5ec;
+
+}
+
+.section__title{
+    font-family: "SrbijaSans";
+    text-align: center;
+    color: #32444e;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+  
+.catalog-nav__wrapper {
+    font-family: "SrbijaSans";
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+  
+.catalog-nav__btn {
+    padding: 0;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 14px;
+    min-width: 150px;
+    font-size: 18px;
+    font-family: "SrbijaSans";
+    font-weight: 900;
+    color: #e6e6e6;
+    border-right: 1px solid #e5e5e5;
+    transition: border .2s, background .2s, color .2s;
+}
+  
+.catalog-nav__btn.is-active {
+    font-family: "SrbijaSans";
+    background: #1f1f1f;
+    color: #fff;
+    border-color: #1f1f1f;
+}
+  
+.catalog-nav__btn:not(.is-active):hover {
+    background: #46653c;
+    color: #fff;
+    border-right-color: #46653c;
+}
+  
+.catalog-nav {
+    width: 500px;
+    max-width: 767px;
+    margin: 0 auto;
+}
+  
+.catalog-nav__wrapper {
+    width: 100%;
+    border-radius: 25px;
+}
+  
+.catalog-nav__item {
+    font-family: "SrbijaSans";
+    width: 50%;
+    flex-grow: 1;
+}
+  
+.catalog-nav__btn {
+    font-family: "SrbijaSans";
+    min-width: 0;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.linear{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px;
+    margin-top: 25px;
+    margin-bottom: 70px;
+}
+
+.linear__block{
+width: 350px;
+display: flex;
+flex-direction: column;
+border-radius: 20px;
+background-color: #ffffff;
+box-shadow: 0px 0px 10px #587175;
+}
+
+.linear__block-under{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.linear__block-img {
+    border-radius: 20px 20px 0 0;
+    width: 300px;
+    padding: 20px 0px 20px 45px;
+    display: flex;
+    align-items: center;
+}
+
+.linear__block-title{
+    font-family: "SrbijaSans";
+    padding-left: 15px;
+    font-size: 20px;
+    color: #32444e;
+}
+
+.linear__block-text{
+    font-family: "SrbijaSans";
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+.linear__block-price{
+    font-family: "SrbijaSans";
+    padding-left: 15px;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.linear__block-btn{
+    font-family: "SrbijaSans";
+    margin-right: 15px;
+    background-color: #46653c;
+    border: 3px solid #46653c;
+    border-radius: 20px;
+    padding: 10px;
+    color: #e6e6e6;
+    margin-bottom: 15px;
+}
+
+.linear__block-btn:hover{
+    background-color: #ffffff;
+    color: #32444e;
+}
+
+.section-catalog{
+    padding-bottom: 35px;
+}
+
+/* Katalog exit */
+
+/* Advantage */
+
+.Advantage__blocks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.Advantage__block{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+}
+
+.Advantage__img{
+    height: 100px;
+    margin-top: 20px;
+    filter: grayscale(100%);
+    transition: .7s ;
+}
+
+.Advantage__img:hover{
+    filter: grayscale(0%);
+    transform: rotate(1.0turn);
+}
+
+.Advantage__text{
+    font-family: "SrbijaSans";
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+/* Advantage exit */
+
+/* Feedback */
+
+.slider__feedback{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+input[name="r"] {
+    display: none;
+}
+
+.slides__feedbacks {
+    width: 400%;
+    height: 80%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: 0.6s;
+}
+
+.navigation {
+    position: absolute;
+    left: 45%;
+    bottom: 15px;
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.lab {
+    width: 30px;
+    height: 10px;
+    background: #ddd;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.lab:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .s1{
+    margin-left: -75%;
+}
+
+.freedback__slider-img{
+    height: 80px;
+    border-radius: 100px;
+}
+
+.freedback__slider-simbol{
+    font-size: 60px;
+}
+
+.freedback__slider-text{
+    font-family: "SrbijaSans";
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.freedback__slider-img{
+    margin-top: 20px;
+}
+.freedback__slider-title{
+    font-family: "SrbijaSans";
+    margin-top: 10px;
+}
+
+.slider__feedback-title{ 
+    font-family: "SrbijaSans";
+    text-align: center;
+    color: #32444e;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+/* Feedback Exit */
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Forma */
+
+.paralax{
+    background: url(../img/forma/listvabackground.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.paralax__title{
+    font-family: "SrbijaSans";
+    text-align: center;
+    color: #ededed;
+    font-size: 40px;
+    padding-top: 100px;
+    margin-bottom: 70px;
+}
+
+.paralax__forma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    gap: 40px;
+}
+
+.paralax__Email{
+    font-family: "SrbijaSans";
+    padding: 15px 40px;
+     border: 3px solid #b9c5d5;
+    border-radius: 40px;
+}
+
+.paralax__btn{
+    font-family: "SrbijaSans";
+    padding: 10px 20px;
+    border: 3px solid #46653c;
+    border-radius: 30px;
+    margin-bottom: 70px;
+}
+
+.paralax__btn:hover{
+    transition: .6s;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #e2e5ec;
+    background-color: #46653c;
+    border: 3px solid #46653c;
+}
+
+/* Forma Exit */
+
+/* Kontakt */
+
+.Kontakt{
+    background-color: #e2e5ec;
+}
+
+.Kontakt__block{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.Kontakt__text-p{
+    font-family: "SrbijaSans";
+    font-size: 22px;
+}
+
+.Kontakt__title{
+    font-family: "SrbijaSans";
+    text-align: center;
+    color: #32444e;
+    font-size: 40px;
+    padding-top: 100px;
+    margin-bottom: 70px;
+}
+
+.Kontakt__cart{
+    margin-bottom: 70px;
+}
+
+/* Kontakt exit */
